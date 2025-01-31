@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Chocolate Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #6f4c3e;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #6f4c3e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5a3e32;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chocolate Facts</h1>
+        <p id="fact"></p>
+        <button id="newFactButton">Get Random Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Chocolate originated from the cacao bean, which is native to Central and South America. The ancient Mayans and Aztecs were among the first to cultivate cacao.",
+            "There are several types of chocolate, including dark chocolate, milk chocolate, white chocolate, and ruby chocolate, each with different cocoa content and ingredients.",
+            "Dark chocolate is known for its health benefits, including being rich in antioxidants, improving heart health, and potentially enhancing brain function.",
+            "Eating chocolate can trigger the release of endorphins, the body's natural feel-good chemicals, which can improve mood and reduce stress.",
+            "It takes about 400 cacao beans to make one pound of chocolate. The beans are fermented, dried, roasted, and then processed into chocolate.",
+            "The average American consumes about 9.5 pounds of chocolate each year, making the United States one of the largest consumers of chocolate in the world.",
+            "Chocolate is toxic to dogs due to theobromine, a compound found in cacao. Even small amounts can be harmful to pets.",
+            "There are numerous chocolate festivals around the world, celebrating everything from chocolate making to tasting, including the Salon du Chocolat in Paris.",
+            "In the 19th century, chocolate was primarily consumed as a beverage. It wasn't until the invention of the chocolate bar in the late 1800s that solid chocolate became popular.",
+            "The Aztecs used cacao beans as currency, and they were so valuable that they were often used to pay taxes and tribute."
+        ];
+
+        document.getElementById('newFactButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
